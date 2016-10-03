@@ -1,0 +1,13 @@
+com.xilinx.sdk.linkgen.prefs.data_server_0\:.bss=mig_7series_0
+com.xilinx.sdk.linkgen.prefs.data_server_0\:.data=mig_7series_0
+com.xilinx.sdk.linkgen.prefs.data_server_0\:.rodata=mig_7series_0
+com.xilinx.sdk.linkgen.prefs.data_server_0\:.sbss=mig_7series_0
+com.xilinx.sdk.linkgen.prefs.data_server_0\:.sbss2=mig_7series_0
+com.xilinx.sdk.linkgen.prefs.data_server_0\:.sdata=mig_7series_0
+com.xilinx.sdk.linkgen.prefs.data_server_0\:.sdata2=mig_7series_0
+com.xilinx.sdk.linkgen.prefs.data_server_0\:.text=mig_7series_0
+com.xilinx.sdk.linkgen.prefs.data_server_0\:heap=mig_7series_0
+com.xilinx.sdk.linkgen.prefs.data_server_0\:heap-size=1024
+com.xilinx.sdk.linkgen.prefs.data_server_0\:stack=mig_7series_0
+com.xilinx.sdk.linkgen.prefs.data_server_0\:stack-size=4096
+eclipse.preferences.version=1

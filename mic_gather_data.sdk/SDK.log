@@ -1,0 +1,2266 @@
+13:07:58 INFO  : Launching XSDB server: xsdb -n -interactive /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/temp_xsdb_launch_script.tcl
+13:08:03 INFO  : XSDB server has started successfully.
+13:08:03 INFO  : Processing command line option -hwspec /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf.
+14:30:40 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1475173814000,  Project:1475168765000
+14:30:40 INFO  : Project block_design_wrapper_hw_platform_0's source hardware specification located at /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+14:30:41 INFO  : Copied contents of /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf into /block_design_wrapper_hw_platform_0/system.hdf.
+14:30:42 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:30:42 INFO  : Clearing existing target manager status.
+14:30:44 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+14:30:44 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+14:36:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:36:25 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+14:36:25 INFO  : 'jtag frequency' command is executed.
+14:36:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+14:36:31 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+14:36:31 INFO  : Context for processor 'microblaze_0' is selected.
+14:36:31 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+14:36:31 INFO  : Context for processor 'microblaze_0' is selected.
+14:36:31 INFO  : System reset is completed.
+14:36:34 INFO  : 'after 3000' command is executed.
+14:36:34 INFO  : Context for processor 'microblaze_0' is selected.
+14:36:36 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf' is downloaded to processor 'microblaze_0'.
+14:36:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf
+----------------End of Script----------------
+
+14:36:36 INFO  : Memory regions updated for context MicroBlaze #0
+14:36:36 INFO  : Context for processor 'microblaze_0' is selected.
+14:36:36 INFO  : 'con' command is executed.
+14:36:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+14:36:36 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/test_ethernet_0_debug.tcl'
+14:40:44 INFO  : Disconnected from the channel tcfchan#1.
+14:42:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:42:23 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+14:42:23 INFO  : 'jtag frequency' command is executed.
+14:42:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+14:42:29 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+14:42:29 INFO  : Context for processor 'microblaze_0' is selected.
+14:42:29 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+14:42:29 INFO  : Context for processor 'microblaze_0' is selected.
+14:42:30 INFO  : System reset is completed.
+14:42:33 INFO  : 'after 3000' command is executed.
+14:42:33 INFO  : Context for processor 'microblaze_0' is selected.
+14:42:34 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf' is downloaded to processor 'microblaze_0'.
+14:42:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf
+----------------End of Script----------------
+
+14:42:34 INFO  : Memory regions updated for context MicroBlaze #0
+14:42:34 INFO  : Context for processor 'microblaze_0' is selected.
+14:42:34 INFO  : 'con' command is executed.
+14:42:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+14:42:34 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/test_ethernet_0_debug.tcl'
+14:45:10 INFO  : Disconnected from the channel tcfchan#2.
+14:45:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:45:10 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+14:45:10 INFO  : 'jtag frequency' command is executed.
+14:45:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+14:45:16 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+14:45:16 INFO  : Context for processor 'microblaze_0' is selected.
+14:45:16 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+14:45:16 INFO  : Context for processor 'microblaze_0' is selected.
+14:45:16 INFO  : System reset is completed.
+14:45:19 INFO  : 'after 3000' command is executed.
+14:45:19 INFO  : Context for processor 'microblaze_0' is selected.
+14:45:20 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf' is downloaded to processor 'microblaze_0'.
+14:45:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf
+----------------End of Script----------------
+
+14:45:20 INFO  : Memory regions updated for context MicroBlaze #0
+14:45:20 INFO  : Context for processor 'microblaze_0' is selected.
+14:45:20 INFO  : 'con' command is executed.
+14:45:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+14:45:20 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/test_ethernet_0_debug.tcl'
+14:47:33 INFO  : Disconnected from the channel tcfchan#3.
+14:47:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:47:33 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+14:47:33 INFO  : 'jtag frequency' command is executed.
+14:47:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+14:47:38 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+14:47:38 ERROR : no targets found with "name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"". available targets:
+  1* xc7a100t
+     2  Debug Module at USER2
+        3  MicroBlaze #0 (Access denied) (Running)
+14:47:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+----------------End of Script----------------
+
+14:47:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:47:56 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+14:47:56 INFO  : 'jtag frequency' command is executed.
+14:47:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+14:48:01 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+14:48:01 ERROR : no targets found with "name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"". available targets:
+  1* xc7a100t
+14:48:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+----------------End of Script----------------
+
+14:49:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:49:09 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+14:49:09 INFO  : 'jtag frequency' command is executed.
+14:49:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+14:49:12 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+14:49:12 ERROR : no targets found with "name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"". available targets:
+  1* xc7a100t
+14:49:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+----------------End of Script----------------
+
+14:50:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:50:01 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+14:50:01 INFO  : 'jtag frequency' command is executed.
+14:50:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+14:50:05 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+14:50:05 ERROR : no targets found with "name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"". available targets:
+  1* xc7a100t
+14:50:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+----------------End of Script----------------
+
+14:50:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:50:38 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+14:50:38 INFO  : 'jtag frequency' command is executed.
+14:50:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+14:50:42 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+14:50:42 ERROR : no targets found with "name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"". available targets:
+  1* xc7a100t
+14:50:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+----------------End of Script----------------
+
+14:50:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:50:49 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+14:50:49 INFO  : 'jtag frequency' command is executed.
+14:50:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+14:50:53 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+14:50:53 ERROR : no targets found with "name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"". available targets:
+  1* xc7a100t
+14:50:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+----------------End of Script----------------
+
+14:51:58 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+14:52:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:52:13 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+14:52:13 INFO  : 'jtag frequency' command is executed.
+14:52:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+14:52:18 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+14:52:18 INFO  : Context for processor 'microblaze_0' is selected.
+14:52:18 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+14:52:18 INFO  : Context for processor 'microblaze_0' is selected.
+14:52:18 INFO  : System reset is completed.
+14:52:21 INFO  : 'after 3000' command is executed.
+14:52:21 INFO  : Context for processor 'microblaze_0' is selected.
+14:52:23 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf' is downloaded to processor 'microblaze_0'.
+14:52:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf
+----------------End of Script----------------
+
+14:52:23 INFO  : Memory regions updated for context MicroBlaze #0
+14:52:23 INFO  : Context for processor 'microblaze_0' is selected.
+14:52:23 INFO  : 'con' command is executed.
+14:52:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+14:52:23 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/test_ethernet_0_debug.tcl'
+14:52:37 ERROR : Unexpected Error while writing user command to XMD stdin: {}
+java.io.IOException
+	at org.eclipse.debug.internal.core.StreamsProxy.write(StreamsProxy.java:132)
+	at com.xilinx.sdk.targetmanager.ui.xmd.XMDConsolePresenter.issueXMDConsoleCommand(XMDConsolePresenter.java:125)
+	at com.xilinx.sdk.targetmanager.ui.xmd.XMDConsolePresenter.processUserInput(XMDConsolePresenter.java:112)
+	at com.xilinx.sdk.targetmanager.ui.xmd.XMDConsolePresenter.xmdInputKeyPressed(XMDConsolePresenter.java:91)
+	at com.xilinx.sdk.targetmanager.ui.xmd.XMDConsoleView$1.keyPressed(XMDConsoleView.java:172)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:167)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4481)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1327)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1351)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1336)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1363)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:763)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3317)
+	at org.eclipse.swt.widgets.Text.gtk_key_press_event(Text.java:1810)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1965)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5590)
+	at org.eclipse.swt.widgets.Text.windowProc(Text.java:2767)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4717)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:9272)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1225)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2422)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3428)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+14:52:47 ERROR : Unexpected Error while writing user command to XMD stdin: {}
+java.io.IOException
+	at org.eclipse.debug.internal.core.StreamsProxy.write(StreamsProxy.java:132)
+	at com.xilinx.sdk.targetmanager.ui.xmd.XMDConsolePresenter.issueXMDConsoleCommand(XMDConsolePresenter.java:125)
+	at com.xilinx.sdk.targetmanager.ui.xmd.XMDConsolePresenter.processUserInput(XMDConsolePresenter.java:112)
+	at com.xilinx.sdk.targetmanager.ui.xmd.XMDConsolePresenter.xmdInputKeyPressed(XMDConsolePresenter.java:91)
+	at com.xilinx.sdk.targetmanager.ui.xmd.XMDConsoleView$1.keyPressed(XMDConsoleView.java:172)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:167)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4481)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1327)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1351)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1336)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1363)
+	at org.eclipse.swt.widgets.Widget.gtk_key_press_event(Widget.java:763)
+	at org.eclipse.swt.widgets.Control.gtk_key_press_event(Control.java:3317)
+	at org.eclipse.swt.widgets.Text.gtk_key_press_event(Text.java:1810)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1965)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5590)
+	at org.eclipse.swt.widgets.Text.windowProc(Text.java:2767)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4717)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:9272)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1225)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2422)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3428)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:654)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:598)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1488)
+15:42:03 INFO  : Disconnected from the channel tcfchan#5.
+15:42:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:42:03 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+15:42:03 INFO  : 'jtag frequency' command is executed.
+15:42:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+15:42:09 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+15:42:10 INFO  : Context for processor 'microblaze_0' is selected.
+15:42:10 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+15:42:10 INFO  : Context for processor 'microblaze_0' is selected.
+15:42:10 INFO  : System reset is completed.
+15:42:13 INFO  : 'after 3000' command is executed.
+15:42:13 INFO  : Context for processor 'microblaze_0' is selected.
+15:42:14 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf' is downloaded to processor 'microblaze_0'.
+15:42:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf
+----------------End of Script----------------
+
+15:42:14 INFO  : Memory regions updated for context MicroBlaze #0
+15:42:14 INFO  : Context for processor 'microblaze_0' is selected.
+15:42:14 INFO  : 'con' command is executed.
+15:42:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+15:42:14 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/test_ethernet_0_debug.tcl'
+15:43:48 INFO  : Disconnected from the channel tcfchan#6.
+15:43:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:43:49 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+15:43:49 INFO  : 'jtag frequency' command is executed.
+15:43:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+15:43:54 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+15:43:54 INFO  : Context for processor 'microblaze_0' is selected.
+15:43:54 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+15:43:54 INFO  : Context for processor 'microblaze_0' is selected.
+15:43:54 INFO  : System reset is completed.
+15:43:57 INFO  : 'after 3000' command is executed.
+15:43:57 INFO  : Context for processor 'microblaze_0' is selected.
+15:43:58 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf' is downloaded to processor 'microblaze_0'.
+15:43:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf
+----------------End of Script----------------
+
+15:43:58 INFO  : Memory regions updated for context MicroBlaze #0
+15:43:59 INFO  : Context for processor 'microblaze_0' is selected.
+15:43:59 INFO  : 'con' command is executed.
+15:43:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+15:43:59 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/test_ethernet_0_debug.tcl'
+15:54:02 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1475178807000,  Project:1475173814000
+15:54:02 INFO  : Project block_design_wrapper_hw_platform_0's source hardware specification located at /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+15:54:03 INFO  : Copied contents of /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf into /block_design_wrapper_hw_platform_0/system.hdf.
+15:54:04 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:54:05 INFO  : 
+15:54:06 INFO  : Updating hardware inferred compiler options for test_ethernet_0.
+15:54:06 INFO  : Clearing existing target manager status.
+15:54:06 INFO  : Closing and re-opening the MSS file of ther project test_ethernet_0_bsp
+15:54:06 INFO  : Closing and re-opening the MSS file of ther project test_ethernet_0_bsp
+15:54:06 INFO  : Closing and re-opening the MSS file of ther project test_ethernet_0_bsp
+15:54:07 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+15:54:07 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+16:11:31 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1475179868000,  Project:1475178807000
+16:11:31 INFO  : Project block_design_wrapper_hw_platform_0's source hardware specification located at /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+16:11:34 INFO  : Copied contents of /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf into /block_design_wrapper_hw_platform_0/system.hdf.
+16:11:35 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+16:11:36 INFO  : 
+16:11:36 INFO  : Updating hardware inferred compiler options for test_ethernet_0.
+16:11:36 INFO  : Clearing existing target manager status.
+16:11:36 INFO  : Closing and re-opening the MSS file of ther project test_ethernet_0_bsp
+16:11:37 INFO  : Closing and re-opening the MSS file of ther project test_ethernet_0_bsp
+16:11:37 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+16:11:37 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+16:12:33 INFO  : Disconnected from the channel tcfchan#7.
+16:12:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:12:33 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+16:12:33 INFO  : 'jtag frequency' command is executed.
+16:12:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+16:12:39 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+16:12:39 INFO  : Context for processor 'microblaze_0' is selected.
+16:12:39 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+16:12:39 INFO  : Context for processor 'microblaze_0' is selected.
+16:12:39 INFO  : System reset is completed.
+16:12:42 INFO  : 'after 3000' command is executed.
+16:12:42 INFO  : Context for processor 'microblaze_0' is selected.
+16:12:44 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf' is downloaded to processor 'microblaze_0'.
+16:12:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf
+----------------End of Script----------------
+
+16:12:44 INFO  : Memory regions updated for context MicroBlaze #0
+16:12:44 INFO  : Context for processor 'microblaze_0' is selected.
+16:12:44 INFO  : 'con' command is executed.
+16:12:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+16:12:44 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/test_ethernet_0_debug.tcl'
+16:13:09 INFO  : Disconnected from the channel tcfchan#8.
+16:13:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:13:10 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+16:13:10 INFO  : 'jtag frequency' command is executed.
+16:13:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+16:13:16 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+16:13:16 INFO  : Context for processor 'microblaze_0' is selected.
+16:13:16 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+16:13:16 INFO  : Context for processor 'microblaze_0' is selected.
+16:13:16 INFO  : System reset is completed.
+16:13:19 INFO  : 'after 3000' command is executed.
+16:13:19 INFO  : Context for processor 'microblaze_0' is selected.
+16:13:21 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf' is downloaded to processor 'microblaze_0'.
+16:13:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf
+----------------End of Script----------------
+
+16:13:21 INFO  : Memory regions updated for context MicroBlaze #0
+16:13:21 INFO  : Context for processor 'microblaze_0' is selected.
+16:13:21 INFO  : 'con' command is executed.
+16:13:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+16:13:21 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/test_ethernet_0_debug.tcl'
+16:14:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:14:57 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+16:14:57 INFO  : 'jtag frequency' command is executed.
+16:14:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+16:15:01 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+16:15:01 INFO  : Context for processor 'microblaze_0' is selected.
+16:15:01 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+16:15:01 INFO  : Context for processor 'microblaze_0' is selected.
+16:15:01 INFO  : System reset is completed.
+16:15:04 INFO  : 'after 3000' command is executed.
+16:15:05 INFO  : Context for processor 'microblaze_0' is selected.
+16:15:06 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf' is downloaded to processor 'microblaze_0'.
+16:15:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf
+----------------End of Script----------------
+
+16:15:06 INFO  : Memory regions updated for context MicroBlaze #0
+16:15:06 INFO  : Context for processor 'microblaze_0' is selected.
+16:15:06 INFO  : 'con' command is executed.
+16:15:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+16:15:06 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration.tcl'
+16:15:20 INFO  : Disconnected from the channel tcfchan#9.
+16:15:59 INFO  : Refreshed build settings on project test_ethernet_0
+16:16:09 WARN  : channel "tcfchan#9" closed
+16:16:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:16:10 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+16:16:10 INFO  : 'jtag frequency' command is executed.
+16:16:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+16:16:15 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+16:16:15 INFO  : Context for processor 'microblaze_0' is selected.
+16:16:15 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+16:16:15 INFO  : Context for processor 'microblaze_0' is selected.
+16:16:15 INFO  : System reset is completed.
+16:16:18 INFO  : 'after 3000' command is executed.
+16:16:18 INFO  : Context for processor 'microblaze_0' is selected.
+16:16:20 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf' is downloaded to processor 'microblaze_0'.
+16:16:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/test_ethernet_0/Debug/test_ethernet_0.elf
+----------------End of Script----------------
+
+16:16:20 INFO  : Memory regions updated for context MicroBlaze #0
+16:16:20 INFO  : Context for processor 'microblaze_0' is selected.
+16:16:20 INFO  : 'con' command is executed.
+16:16:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+16:16:20 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration.tcl'
+17:06:34 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1475183033000,  Project:1475179868000
+17:06:34 INFO  : Project block_design_wrapper_hw_platform_0's source hardware specification located at /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+17:06:37 INFO  : Copied contents of /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf into /block_design_wrapper_hw_platform_0/system.hdf.
+17:06:37 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+17:06:38 INFO  : 
+17:06:39 INFO  : Updating hardware inferred compiler options for test_ethernet_0.
+17:06:39 INFO  : Clearing existing target manager status.
+17:06:39 INFO  : Closing and re-opening the MSS file of ther project test_ethernet_0_bsp
+17:06:40 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+17:06:40 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+17:13:23 INFO  : Successfully generated /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/src/lscript.ld.
+17:13:23 INFO  : Applying linker script to all configurations of project data_server_0.
+17:13:23 INFO  : Setting rebuild state to true for all configurations of project data_server_0.
+17:16:42 INFO  : Successfully generated /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/src/lscript.ld.
+17:16:42 INFO  : Applying linker script to all configurations of project data_server_0.
+17:16:42 INFO  : Setting rebuild state to true for all configurations of project data_server_0.
+17:19:11 INFO  : Refreshed build settings on project data_server_0
+17:29:23 INFO  : Refreshed build settings on project data_server_0
+17:30:07 INFO  : Refreshed build settings on project data_server_0
+17:54:51 INFO  : Successfully generated /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/src/lscript.ld.
+17:54:51 INFO  : Applying linker script to all configurations of project data_server_0.
+17:54:51 INFO  : Setting rebuild state to true for all configurations of project data_server_0.
+20:33:45 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1475192984000,  Project:1475183033000
+20:33:45 INFO  : Project block_design_wrapper_hw_platform_0's source hardware specification located at /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+20:33:47 INFO  : Copied contents of /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf into /block_design_wrapper_hw_platform_0/system.hdf.
+20:33:47 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+20:33:49 INFO  : 
+20:33:50 INFO  : 
+20:33:51 INFO  : Updating hardware inferred compiler options for data_server_0.
+20:33:51 INFO  : Updating hardware inferred compiler options for test_ethernet_0.
+20:33:51 INFO  : Clearing existing target manager status.
+20:33:51 INFO  : Closing and re-opening the MSS file of ther project test_ethernet_0_bsp
+20:33:52 INFO  : Closing and re-opening the MSS file of ther project data_server_0_bsp
+20:33:52 INFO  : Closing and re-opening the MSS file of ther project test_ethernet_0_bsp
+20:33:52 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+20:33:53 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+22:59:14 INFO  : Disconnected from the channel tcfchan#10.
+22:59:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:59:15 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+22:59:15 INFO  : 'jtag frequency' command is executed.
+22:59:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+22:59:22 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+22:59:22 INFO  : Context for processor 'microblaze_0' is selected.
+22:59:22 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+22:59:22 INFO  : Context for processor 'microblaze_0' is selected.
+22:59:22 INFO  : System reset is completed.
+22:59:25 INFO  : 'after 3000' command is executed.
+22:59:25 INFO  : Context for processor 'microblaze_0' is selected.
+22:59:27 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+22:59:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+22:59:27 INFO  : Memory regions updated for context MicroBlaze #0
+22:59:27 INFO  : Context for processor 'microblaze_0' is selected.
+22:59:27 INFO  : 'con' command is executed.
+22:59:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+22:59:27 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+23:00:19 INFO  : Refreshed build settings on project data_server_0
+23:00:32 INFO  : Disconnected from the channel tcfchan#11.
+23:00:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:00:32 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+23:00:32 INFO  : 'jtag frequency' command is executed.
+23:00:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+23:00:38 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+23:00:38 INFO  : Context for processor 'microblaze_0' is selected.
+23:00:38 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+23:00:38 INFO  : Context for processor 'microblaze_0' is selected.
+23:00:38 INFO  : System reset is completed.
+23:00:41 INFO  : 'after 3000' command is executed.
+23:00:41 INFO  : Context for processor 'microblaze_0' is selected.
+23:00:43 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+23:00:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+23:00:43 INFO  : Memory regions updated for context MicroBlaze #0
+23:00:43 INFO  : Context for processor 'microblaze_0' is selected.
+23:00:43 INFO  : 'con' command is executed.
+23:00:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+23:00:43 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+23:17:31 INFO  : Disconnected from the channel tcfchan#12.
+16:03:48 INFO  : Launching XSDB server: xsdb -n -interactive /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/temp_xsdb_launch_script.tcl
+16:03:49 INFO  : XSDB server has started successfully.
+16:03:49 INFO  : Processing command line option -hwspec /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf.
+16:03:49 INFO  : Checking for hwspec changes in the project block_design_wrapper_hw_platform_0.
+16:04:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:04:33 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+16:04:33 INFO  : 'jtag frequency' command is executed.
+16:04:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+16:04:36 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+16:04:36 INFO  : Context for processor 'microblaze_0' is selected.
+16:04:36 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+16:04:37 INFO  : Context for processor 'microblaze_0' is selected.
+16:04:37 INFO  : System reset is completed.
+16:04:40 INFO  : 'after 3000' command is executed.
+16:04:40 INFO  : Context for processor 'microblaze_0' is selected.
+16:04:41 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+16:04:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+16:04:41 INFO  : Memory regions updated for context MicroBlaze #0
+16:04:41 INFO  : Context for processor 'microblaze_0' is selected.
+16:04:41 INFO  : 'con' command is executed.
+16:04:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+16:04:41 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+16:06:05 INFO  : Disconnected from the channel tcfchan#1.
+16:06:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:06:05 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+16:06:05 INFO  : 'jtag frequency' command is executed.
+16:06:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+16:06:08 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+16:06:08 INFO  : Context for processor 'microblaze_0' is selected.
+16:06:08 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+16:06:08 INFO  : Context for processor 'microblaze_0' is selected.
+16:06:08 INFO  : System reset is completed.
+16:06:11 INFO  : 'after 3000' command is executed.
+16:06:11 INFO  : Context for processor 'microblaze_0' is selected.
+16:06:13 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+16:06:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+16:06:13 INFO  : Memory regions updated for context MicroBlaze #0
+16:06:13 INFO  : Context for processor 'microblaze_0' is selected.
+16:06:13 INFO  : 'con' command is executed.
+16:06:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+16:06:13 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+16:53:43 INFO  : Disconnected from the channel tcfchan#2.
+16:53:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:53:43 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+16:53:43 INFO  : 'jtag frequency' command is executed.
+16:53:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+16:53:45 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+16:53:46 INFO  : Context for processor 'microblaze_0' is selected.
+16:53:46 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+16:53:46 INFO  : Context for processor 'microblaze_0' is selected.
+16:53:46 INFO  : System reset is completed.
+16:53:49 INFO  : 'after 3000' command is executed.
+16:53:49 INFO  : Context for processor 'microblaze_0' is selected.
+16:53:51 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+16:53:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+16:53:51 INFO  : Memory regions updated for context MicroBlaze #0
+16:53:51 INFO  : Context for processor 'microblaze_0' is selected.
+16:53:51 INFO  : 'con' command is executed.
+16:53:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+16:53:51 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+17:00:48 INFO  : Disconnected from the channel tcfchan#3.
+17:00:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:00:49 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+17:00:49 INFO  : 'jtag frequency' command is executed.
+17:00:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+17:00:51 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+17:00:51 INFO  : Context for processor 'microblaze_0' is selected.
+17:00:51 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+17:00:51 INFO  : Context for processor 'microblaze_0' is selected.
+17:00:51 INFO  : System reset is completed.
+17:00:54 INFO  : 'after 3000' command is executed.
+17:00:54 INFO  : Context for processor 'microblaze_0' is selected.
+17:00:56 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+17:00:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+17:00:56 INFO  : Memory regions updated for context MicroBlaze #0
+17:00:56 INFO  : Context for processor 'microblaze_0' is selected.
+17:00:56 INFO  : 'con' command is executed.
+17:00:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+17:00:56 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+17:01:19 INFO  : Disconnected from the channel tcfchan#4.
+17:01:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:01:19 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+17:01:19 INFO  : 'jtag frequency' command is executed.
+17:01:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+17:01:21 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+17:01:21 INFO  : Context for processor 'microblaze_0' is selected.
+17:01:22 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+17:01:22 INFO  : Context for processor 'microblaze_0' is selected.
+17:01:22 INFO  : System reset is completed.
+17:01:25 INFO  : 'after 3000' command is executed.
+17:01:25 INFO  : Context for processor 'microblaze_0' is selected.
+17:01:26 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+17:01:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+17:01:26 INFO  : Memory regions updated for context MicroBlaze #0
+17:01:26 INFO  : Context for processor 'microblaze_0' is selected.
+17:01:26 INFO  : 'con' command is executed.
+17:01:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+17:01:26 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+17:07:53 INFO  : Disconnected from the channel tcfchan#5.
+17:07:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:07:53 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+17:07:53 INFO  : 'jtag frequency' command is executed.
+17:07:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+17:07:56 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+17:07:56 INFO  : Context for processor 'microblaze_0' is selected.
+17:07:56 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+17:07:56 INFO  : Context for processor 'microblaze_0' is selected.
+17:07:56 INFO  : System reset is completed.
+17:07:59 INFO  : 'after 3000' command is executed.
+17:07:59 INFO  : Context for processor 'microblaze_0' is selected.
+17:08:01 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+17:08:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+17:08:01 INFO  : Memory regions updated for context MicroBlaze #0
+17:08:01 INFO  : Context for processor 'microblaze_0' is selected.
+17:08:01 INFO  : 'con' command is executed.
+17:08:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+17:08:01 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+17:09:44 INFO  : Disconnected from the channel tcfchan#6.
+17:09:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:09:44 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+17:09:44 INFO  : 'jtag frequency' command is executed.
+17:09:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+17:09:50 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+17:09:50 INFO  : Context for processor 'microblaze_0' is selected.
+17:09:51 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+17:09:51 INFO  : Context for processor 'microblaze_0' is selected.
+17:09:51 INFO  : System reset is completed.
+17:09:54 INFO  : 'after 3000' command is executed.
+17:09:54 INFO  : Context for processor 'microblaze_0' is selected.
+17:09:55 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+17:09:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+17:09:55 INFO  : Memory regions updated for context MicroBlaze #0
+17:09:56 INFO  : Context for processor 'microblaze_0' is selected.
+17:09:56 INFO  : 'con' command is executed.
+17:09:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+17:09:56 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+17:11:04 INFO  : Disconnected from the channel tcfchan#7.
+17:11:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:11:04 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+17:11:04 INFO  : 'jtag frequency' command is executed.
+17:11:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+17:11:10 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+17:11:10 INFO  : Context for processor 'microblaze_0' is selected.
+17:11:10 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+17:11:10 INFO  : Context for processor 'microblaze_0' is selected.
+17:11:10 INFO  : System reset is completed.
+17:11:13 INFO  : 'after 3000' command is executed.
+17:11:13 INFO  : Context for processor 'microblaze_0' is selected.
+17:11:15 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+17:11:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+17:11:15 INFO  : Memory regions updated for context MicroBlaze #0
+17:11:15 INFO  : Context for processor 'microblaze_0' is selected.
+17:11:15 INFO  : 'con' command is executed.
+17:11:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+17:11:15 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+17:43:40 INFO  : Disconnected from the channel tcfchan#8.
+17:43:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:43:41 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+17:43:41 INFO  : 'jtag frequency' command is executed.
+17:43:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+17:43:47 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+17:43:47 INFO  : Context for processor 'microblaze_0' is selected.
+17:43:47 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+17:43:47 INFO  : Context for processor 'microblaze_0' is selected.
+17:43:48 INFO  : System reset is completed.
+17:43:51 INFO  : 'after 3000' command is executed.
+17:43:51 INFO  : Context for processor 'microblaze_0' is selected.
+17:43:52 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+17:43:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+17:43:52 INFO  : Memory regions updated for context MicroBlaze #0
+17:43:52 INFO  : Context for processor 'microblaze_0' is selected.
+17:43:52 INFO  : 'con' command is executed.
+17:43:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+17:43:52 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+17:45:32 INFO  : Disconnected from the channel tcfchan#9.
+17:45:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:45:32 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+17:45:32 INFO  : 'jtag frequency' command is executed.
+17:45:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+17:45:37 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+17:45:38 INFO  : Context for processor 'microblaze_0' is selected.
+17:45:38 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+17:45:38 INFO  : Context for processor 'microblaze_0' is selected.
+17:45:38 INFO  : System reset is completed.
+17:45:41 INFO  : 'after 3000' command is executed.
+17:45:41 INFO  : Context for processor 'microblaze_0' is selected.
+17:45:43 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+17:45:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+17:45:43 INFO  : Memory regions updated for context MicroBlaze #0
+17:45:43 INFO  : Context for processor 'microblaze_0' is selected.
+17:45:43 INFO  : 'con' command is executed.
+17:45:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+17:45:43 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+17:51:30 INFO  : Disconnected from the channel tcfchan#10.
+17:51:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:51:30 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+17:51:30 INFO  : 'jtag frequency' command is executed.
+17:51:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+17:51:36 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+17:51:36 INFO  : Context for processor 'microblaze_0' is selected.
+17:51:37 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+17:51:37 INFO  : Context for processor 'microblaze_0' is selected.
+17:51:37 INFO  : System reset is completed.
+17:51:40 INFO  : 'after 3000' command is executed.
+17:51:40 INFO  : Context for processor 'microblaze_0' is selected.
+17:51:42 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+17:51:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+17:51:42 INFO  : Memory regions updated for context MicroBlaze #0
+17:51:42 INFO  : Context for processor 'microblaze_0' is selected.
+17:51:42 INFO  : 'con' command is executed.
+17:51:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+17:51:42 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+17:58:58 INFO  : Disconnected from the channel tcfchan#11.
+17:58:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:58:58 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+17:58:58 INFO  : 'jtag frequency' command is executed.
+17:58:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+17:59:04 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+17:59:04 INFO  : Context for processor 'microblaze_0' is selected.
+17:59:04 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+17:59:04 INFO  : Context for processor 'microblaze_0' is selected.
+17:59:04 INFO  : System reset is completed.
+17:59:07 INFO  : 'after 3000' command is executed.
+17:59:07 INFO  : Context for processor 'microblaze_0' is selected.
+17:59:09 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+17:59:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+17:59:09 INFO  : Memory regions updated for context MicroBlaze #0
+17:59:09 INFO  : Context for processor 'microblaze_0' is selected.
+17:59:09 INFO  : 'con' command is executed.
+17:59:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+17:59:09 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+18:02:19 INFO  : Disconnected from the channel tcfchan#12.
+18:02:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:02:19 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+18:02:19 INFO  : 'jtag frequency' command is executed.
+18:02:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+18:02:25 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+18:02:25 INFO  : Context for processor 'microblaze_0' is selected.
+18:02:26 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+18:02:26 INFO  : Context for processor 'microblaze_0' is selected.
+18:02:26 INFO  : System reset is completed.
+18:02:29 INFO  : 'after 3000' command is executed.
+18:02:29 INFO  : Context for processor 'microblaze_0' is selected.
+18:02:31 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+18:02:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+18:02:31 INFO  : Memory regions updated for context MicroBlaze #0
+18:02:31 INFO  : Context for processor 'microblaze_0' is selected.
+18:02:31 INFO  : 'con' command is executed.
+18:02:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+18:02:31 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+18:04:45 INFO  : Disconnected from the channel tcfchan#13.
+18:04:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:04:45 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+18:04:45 INFO  : 'jtag frequency' command is executed.
+18:04:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+18:04:51 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+18:04:51 INFO  : Context for processor 'microblaze_0' is selected.
+18:04:51 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+18:04:51 INFO  : Context for processor 'microblaze_0' is selected.
+18:04:51 INFO  : System reset is completed.
+18:04:54 INFO  : 'after 3000' command is executed.
+18:04:54 INFO  : Context for processor 'microblaze_0' is selected.
+18:04:56 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+18:04:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+18:04:56 INFO  : Memory regions updated for context MicroBlaze #0
+18:04:56 INFO  : Context for processor 'microblaze_0' is selected.
+18:04:56 INFO  : 'con' command is executed.
+18:04:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+18:04:56 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+18:10:02 INFO  : Disconnected from the channel tcfchan#14.
+18:10:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:10:02 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+18:10:02 INFO  : 'jtag frequency' command is executed.
+18:10:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+18:10:08 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+18:10:08 INFO  : Context for processor 'microblaze_0' is selected.
+18:10:09 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+18:10:09 INFO  : Context for processor 'microblaze_0' is selected.
+18:10:09 INFO  : System reset is completed.
+18:10:12 INFO  : 'after 3000' command is executed.
+18:10:12 INFO  : Context for processor 'microblaze_0' is selected.
+18:10:14 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+18:10:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+18:10:14 INFO  : Memory regions updated for context MicroBlaze #0
+18:10:14 INFO  : Context for processor 'microblaze_0' is selected.
+18:10:14 INFO  : 'con' command is executed.
+18:10:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+18:10:14 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+18:11:39 INFO  : Disconnected from the channel tcfchan#15.
+18:11:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:11:40 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+18:11:40 INFO  : 'jtag frequency' command is executed.
+18:11:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+18:11:45 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+18:11:45 INFO  : Context for processor 'microblaze_0' is selected.
+18:11:46 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+18:11:46 INFO  : Context for processor 'microblaze_0' is selected.
+18:11:46 INFO  : System reset is completed.
+18:11:49 INFO  : 'after 3000' command is executed.
+18:11:49 INFO  : Context for processor 'microblaze_0' is selected.
+18:11:50 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+18:11:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+18:11:51 INFO  : Memory regions updated for context MicroBlaze #0
+18:11:51 INFO  : Context for processor 'microblaze_0' is selected.
+18:11:51 INFO  : 'con' command is executed.
+18:11:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+18:11:51 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+18:13:35 INFO  : Disconnected from the channel tcfchan#16.
+18:13:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:13:35 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+18:13:35 INFO  : 'jtag frequency' command is executed.
+18:13:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+18:13:41 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+18:13:41 INFO  : Context for processor 'microblaze_0' is selected.
+18:13:41 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+18:13:41 INFO  : Context for processor 'microblaze_0' is selected.
+18:13:41 INFO  : System reset is completed.
+18:13:44 INFO  : 'after 3000' command is executed.
+18:13:44 INFO  : Context for processor 'microblaze_0' is selected.
+18:13:46 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+18:13:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+18:13:46 INFO  : Memory regions updated for context MicroBlaze #0
+18:13:46 INFO  : Context for processor 'microblaze_0' is selected.
+18:13:46 INFO  : 'con' command is executed.
+18:13:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+18:13:46 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+18:15:43 INFO  : Disconnected from the channel tcfchan#17.
+18:15:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:15:44 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+18:15:44 INFO  : 'jtag frequency' command is executed.
+18:15:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+18:15:49 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+18:15:49 INFO  : Context for processor 'microblaze_0' is selected.
+18:15:49 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+18:15:49 INFO  : Context for processor 'microblaze_0' is selected.
+18:15:49 INFO  : System reset is completed.
+18:15:52 INFO  : 'after 3000' command is executed.
+18:15:53 INFO  : Context for processor 'microblaze_0' is selected.
+18:15:54 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+18:15:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+18:15:54 INFO  : Memory regions updated for context MicroBlaze #0
+18:15:54 INFO  : Context for processor 'microblaze_0' is selected.
+18:15:54 INFO  : 'con' command is executed.
+18:15:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+18:15:54 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+18:17:11 INFO  : Disconnected from the channel tcfchan#18.
+18:17:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:17:11 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+18:17:11 INFO  : 'jtag frequency' command is executed.
+18:17:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+18:17:16 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+18:17:16 INFO  : Context for processor 'microblaze_0' is selected.
+18:17:16 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+18:17:16 INFO  : Context for processor 'microblaze_0' is selected.
+18:17:17 INFO  : System reset is completed.
+18:17:20 INFO  : 'after 3000' command is executed.
+18:17:20 INFO  : Context for processor 'microblaze_0' is selected.
+18:17:21 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+18:17:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+18:17:21 INFO  : Memory regions updated for context MicroBlaze #0
+18:17:21 INFO  : Context for processor 'microblaze_0' is selected.
+18:17:21 INFO  : 'con' command is executed.
+18:17:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+18:17:21 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+18:33:13 INFO  : Disconnected from the channel tcfchan#19.
+13:21:05 INFO  : Launching XSDB server: xsdb -n -interactive /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/temp_xsdb_launch_script.tcl
+13:21:06 INFO  : XSDB server has started successfully.
+13:21:07 INFO  : Processing command line option -hwspec /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf.
+13:21:07 INFO  : Checking for hwspec changes in the project block_design_wrapper_hw_platform_0.
+13:21:07 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1475274626000,  Project:1475192984000
+13:21:07 INFO  : The hardware specification for project 'block_design_wrapper_hw_platform_0' is different from /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf.
+13:21:07 INFO  : Copied contents of /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf into /block_design_wrapper_hw_platform_0/system.hdf.
+13:21:08 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:21:09 INFO  : 
+13:21:10 INFO  : 
+13:21:11 INFO  : 
+13:21:12 INFO  : Updating hardware inferred compiler options for data_server_0.
+13:21:13 INFO  : Updating hardware inferred compiler options for fsbl.
+13:21:14 INFO  : Updating hardware inferred compiler options for test_ethernet_0.
+13:21:14 INFO  : Clearing existing target manager status.
+13:21:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:21:30 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+13:21:30 INFO  : 'jtag frequency' command is executed.
+13:21:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+13:21:32 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+13:21:32 INFO  : Context for processor 'microblaze_0' is selected.
+13:21:32 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+13:21:32 INFO  : Context for processor 'microblaze_0' is selected.
+13:21:32 INFO  : System reset is completed.
+13:21:35 INFO  : 'after 3000' command is executed.
+13:21:36 INFO  : Context for processor 'microblaze_0' is selected.
+13:21:37 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+13:21:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+13:21:37 INFO  : Memory regions updated for context MicroBlaze #0
+13:21:37 INFO  : Context for processor 'microblaze_0' is selected.
+13:21:37 INFO  : 'con' command is executed.
+13:21:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+13:21:37 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+13:24:24 INFO  : Disconnected from the channel tcfchan#1.
+13:24:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:24:24 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+13:24:24 INFO  : 'jtag frequency' command is executed.
+13:24:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+13:24:29 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+13:24:29 INFO  : Context for processor 'microblaze_0' is selected.
+13:24:29 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+13:24:29 INFO  : Context for processor 'microblaze_0' is selected.
+13:24:29 INFO  : System reset is completed.
+13:24:32 INFO  : 'after 3000' command is executed.
+13:24:33 INFO  : Context for processor 'microblaze_0' is selected.
+13:24:34 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+13:24:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+13:24:34 INFO  : Memory regions updated for context MicroBlaze #0
+13:24:34 INFO  : Context for processor 'microblaze_0' is selected.
+13:24:34 INFO  : 'con' command is executed.
+13:24:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+13:24:34 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+13:34:48 INFO  : Disconnected from the channel tcfchan#2.
+13:34:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:34:48 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+13:34:48 INFO  : 'jtag frequency' command is executed.
+13:34:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+13:34:54 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+13:34:54 INFO  : Context for processor 'microblaze_0' is selected.
+13:34:54 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+13:34:54 INFO  : Context for processor 'microblaze_0' is selected.
+13:34:54 INFO  : System reset is completed.
+13:34:57 INFO  : 'after 3000' command is executed.
+13:34:57 INFO  : Context for processor 'microblaze_0' is selected.
+13:34:59 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+13:34:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+13:34:59 INFO  : Memory regions updated for context MicroBlaze #0
+13:34:59 INFO  : Context for processor 'microblaze_0' is selected.
+13:34:59 INFO  : 'con' command is executed.
+13:34:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+13:34:59 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+13:39:48 INFO  : Disconnected from the channel tcfchan#3.
+13:39:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:39:49 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+13:39:49 INFO  : 'jtag frequency' command is executed.
+13:39:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+13:39:55 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+13:39:55 INFO  : Context for processor 'microblaze_0' is selected.
+13:39:55 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+13:39:55 INFO  : Context for processor 'microblaze_0' is selected.
+13:39:55 INFO  : System reset is completed.
+13:39:58 INFO  : 'after 3000' command is executed.
+13:39:58 INFO  : Context for processor 'microblaze_0' is selected.
+13:40:00 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+13:40:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+13:40:00 INFO  : Memory regions updated for context MicroBlaze #0
+13:40:00 INFO  : Context for processor 'microblaze_0' is selected.
+13:40:00 INFO  : 'con' command is executed.
+13:40:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+13:40:00 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+13:58:44 INFO  : Disconnected from the channel tcfchan#4.
+13:58:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:58:44 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+13:58:44 INFO  : 'jtag frequency' command is executed.
+13:58:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+13:58:50 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+13:58:50 INFO  : Context for processor 'microblaze_0' is selected.
+13:58:50 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+13:58:50 INFO  : Context for processor 'microblaze_0' is selected.
+13:58:50 INFO  : System reset is completed.
+13:58:53 INFO  : 'after 3000' command is executed.
+13:58:53 INFO  : Context for processor 'microblaze_0' is selected.
+13:58:55 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+13:58:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+13:58:55 INFO  : Memory regions updated for context MicroBlaze #0
+13:58:55 INFO  : Context for processor 'microblaze_0' is selected.
+13:58:55 INFO  : 'con' command is executed.
+13:58:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+13:58:55 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+14:02:47 INFO  : Disconnected from the channel tcfchan#5.
+14:02:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:02:48 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+14:02:48 INFO  : 'jtag frequency' command is executed.
+14:02:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+14:02:53 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+14:02:54 INFO  : Context for processor 'microblaze_0' is selected.
+14:02:54 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+14:02:54 INFO  : Context for processor 'microblaze_0' is selected.
+14:02:54 INFO  : System reset is completed.
+14:02:57 INFO  : 'after 3000' command is executed.
+14:02:57 INFO  : Context for processor 'microblaze_0' is selected.
+14:02:58 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+14:02:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+14:02:58 INFO  : Memory regions updated for context MicroBlaze #0
+14:02:58 INFO  : Context for processor 'microblaze_0' is selected.
+14:02:58 INFO  : 'con' command is executed.
+14:02:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+14:02:58 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+14:03:40 INFO  : Disconnected from the channel tcfchan#6.
+14:03:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:03:41 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+14:03:41 INFO  : 'jtag frequency' command is executed.
+14:03:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+14:03:47 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+14:03:47 INFO  : Context for processor 'microblaze_0' is selected.
+14:03:47 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+14:03:47 INFO  : Context for processor 'microblaze_0' is selected.
+14:03:47 INFO  : System reset is completed.
+14:03:50 INFO  : 'after 3000' command is executed.
+14:03:51 INFO  : Context for processor 'microblaze_0' is selected.
+14:03:52 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+14:03:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+14:03:52 INFO  : Memory regions updated for context MicroBlaze #0
+14:03:52 INFO  : Context for processor 'microblaze_0' is selected.
+14:03:52 INFO  : 'con' command is executed.
+14:03:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+14:03:52 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+14:23:47 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1475346193000,  Project:1475274626000
+14:23:47 INFO  : Project block_design_wrapper_hw_platform_0's source hardware specification located at /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+14:23:48 INFO  : Copied contents of /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf into /block_design_wrapper_hw_platform_0/system.hdf.
+14:23:49 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:23:50 INFO  : 
+14:23:51 INFO  : 
+14:23:52 INFO  : 
+14:23:53 INFO  : Updating hardware inferred compiler options for data_server_0.
+14:23:54 INFO  : Updating hardware inferred compiler options for fsbl.
+14:23:55 INFO  : Updating hardware inferred compiler options for test_ethernet_0.
+14:23:56 INFO  : Clearing existing target manager status.
+14:23:56 INFO  : Closing and re-opening the MSS file of ther project data_server_0_bsp
+14:23:56 INFO  : Closing and re-opening the MSS file of ther project data_server_0_bsp
+14:23:56 INFO  : Closing and re-opening the MSS file of ther project data_server_0_bsp
+14:23:56 INFO  : Closing and re-opening the MSS file of ther project data_server_0_bsp
+14:23:56 INFO  : Closing and re-opening the MSS file of ther project data_server_0_bsp
+14:23:56 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+14:24:04 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+14:25:19 INFO  : Disconnected from the channel tcfchan#7.
+14:25:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:25:19 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+14:25:19 INFO  : 'jtag frequency' command is executed.
+14:25:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+14:25:25 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+14:25:25 INFO  : Context for processor 'microblaze_0' is selected.
+14:25:25 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+14:25:25 INFO  : Context for processor 'microblaze_0' is selected.
+14:25:25 INFO  : System reset is completed.
+14:25:28 INFO  : 'after 3000' command is executed.
+14:25:28 INFO  : Context for processor 'microblaze_0' is selected.
+14:25:30 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+14:25:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+14:25:30 INFO  : Memory regions updated for context MicroBlaze #0
+14:25:30 INFO  : Context for processor 'microblaze_0' is selected.
+14:25:30 INFO  : 'con' command is executed.
+14:25:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+14:25:30 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+15:31:33 INFO  : Disconnected from the channel tcfchan#8.
+15:31:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:31:34 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+15:31:34 INFO  : 'jtag frequency' command is executed.
+15:31:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+15:31:40 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+15:31:40 INFO  : Context for processor 'microblaze_0' is selected.
+15:31:40 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+15:31:40 INFO  : Context for processor 'microblaze_0' is selected.
+15:31:40 INFO  : System reset is completed.
+15:31:43 INFO  : 'after 3000' command is executed.
+15:31:43 INFO  : Context for processor 'microblaze_0' is selected.
+15:31:44 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+15:31:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+15:31:44 INFO  : Memory regions updated for context MicroBlaze #0
+15:31:45 INFO  : Context for processor 'microblaze_0' is selected.
+15:31:45 INFO  : 'con' command is executed.
+15:31:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+15:31:45 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+15:32:15 INFO  : Disconnected from the channel tcfchan#9.
+15:32:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:32:15 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+15:32:15 INFO  : 'jtag frequency' command is executed.
+15:32:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+15:32:21 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+15:32:21 INFO  : Context for processor 'microblaze_0' is selected.
+15:32:21 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+15:32:21 INFO  : Context for processor 'microblaze_0' is selected.
+15:32:21 INFO  : System reset is completed.
+15:32:24 INFO  : 'after 3000' command is executed.
+15:32:24 INFO  : Context for processor 'microblaze_0' is selected.
+15:32:26 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+15:32:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+15:32:26 INFO  : Memory regions updated for context MicroBlaze #0
+15:32:26 INFO  : Context for processor 'microblaze_0' is selected.
+15:32:26 INFO  : 'con' command is executed.
+15:32:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+15:32:26 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+15:34:12 INFO  : Disconnected from the channel tcfchan#10.
+15:34:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:34:12 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+15:34:12 INFO  : 'jtag frequency' command is executed.
+15:34:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+15:34:18 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+15:34:18 INFO  : Context for processor 'microblaze_0' is selected.
+15:34:18 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+15:34:18 INFO  : Context for processor 'microblaze_0' is selected.
+15:34:18 INFO  : System reset is completed.
+15:34:21 INFO  : 'after 3000' command is executed.
+15:34:21 INFO  : Context for processor 'microblaze_0' is selected.
+15:34:23 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+15:34:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+15:34:23 INFO  : Memory regions updated for context MicroBlaze #0
+15:34:23 INFO  : Context for processor 'microblaze_0' is selected.
+15:34:23 INFO  : 'con' command is executed.
+15:34:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+15:34:23 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+16:06:29 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1475351794000,  Project:1475346193000
+16:06:29 INFO  : Project block_design_wrapper_hw_platform_0's source hardware specification located at /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+16:06:31 INFO  : Copied contents of /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf into /block_design_wrapper_hw_platform_0/system.hdf.
+16:06:31 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+16:06:32 INFO  : 
+16:06:33 INFO  : 
+16:06:35 INFO  : 
+16:06:35 INFO  : Updating hardware inferred compiler options for data_server_0.
+16:06:36 INFO  : Updating hardware inferred compiler options for fsbl.
+16:06:37 INFO  : Updating hardware inferred compiler options for test_ethernet_0.
+16:06:37 INFO  : Clearing existing target manager status.
+16:06:37 INFO  : Closing and re-opening the MSS file of ther project data_server_0_bsp
+16:06:37 INFO  : Closing and re-opening the MSS file of ther project data_server_0_bsp
+16:06:37 INFO  : Closing and re-opening the MSS file of ther project data_server_0_bsp
+16:06:37 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+16:06:39 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+16:58:14 INFO  : Disconnected from the channel tcfchan#11.
+16:58:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:58:15 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+16:58:15 INFO  : 'jtag frequency' command is executed.
+16:58:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+16:58:20 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+16:58:20 INFO  : Context for processor 'microblaze_0' is selected.
+16:58:20 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+16:58:20 INFO  : Context for processor 'microblaze_0' is selected.
+16:58:21 INFO  : System reset is completed.
+16:58:24 INFO  : 'after 3000' command is executed.
+16:58:24 INFO  : Context for processor 'microblaze_0' is selected.
+16:58:25 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+16:58:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+16:58:25 INFO  : Memory regions updated for context MicroBlaze #0
+16:58:25 INFO  : Context for processor 'microblaze_0' is selected.
+16:58:25 INFO  : 'con' command is executed.
+16:58:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+16:58:25 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+17:20:55 INFO  : Disconnected from the channel tcfchan#12.
+17:20:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:20:55 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+17:20:55 INFO  : 'jtag frequency' command is executed.
+17:20:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+17:21:00 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+17:21:00 INFO  : Context for processor 'microblaze_0' is selected.
+17:21:00 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+17:21:00 INFO  : Context for processor 'microblaze_0' is selected.
+17:21:00 INFO  : System reset is completed.
+17:21:03 INFO  : 'after 3000' command is executed.
+17:21:04 INFO  : Context for processor 'microblaze_0' is selected.
+17:21:05 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+17:21:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+17:21:05 INFO  : Memory regions updated for context MicroBlaze #0
+17:21:05 INFO  : Context for processor 'microblaze_0' is selected.
+17:21:05 INFO  : 'con' command is executed.
+17:21:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+17:21:05 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+17:40:36 INFO  : Disconnected from the channel tcfchan#13.
+17:40:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:40:36 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+17:40:36 INFO  : 'jtag frequency' command is executed.
+17:40:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+17:40:42 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+17:40:43 INFO  : Context for processor 'microblaze_0' is selected.
+17:40:43 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+17:40:43 INFO  : Context for processor 'microblaze_0' is selected.
+17:40:43 INFO  : System reset is completed.
+17:40:46 INFO  : 'after 3000' command is executed.
+17:40:46 INFO  : Context for processor 'microblaze_0' is selected.
+17:40:47 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+17:40:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+17:40:47 INFO  : Memory regions updated for context MicroBlaze #0
+17:40:47 INFO  : Context for processor 'microblaze_0' is selected.
+17:40:47 INFO  : 'con' command is executed.
+17:40:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+17:40:47 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+17:41:41 INFO  : Disconnected from the channel tcfchan#14.
+17:41:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:41:42 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+17:41:42 INFO  : 'jtag frequency' command is executed.
+17:41:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+17:41:48 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+17:41:48 INFO  : Context for processor 'microblaze_0' is selected.
+17:41:48 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+17:41:48 INFO  : Context for processor 'microblaze_0' is selected.
+17:41:48 INFO  : System reset is completed.
+17:41:51 INFO  : 'after 3000' command is executed.
+17:41:51 INFO  : Context for processor 'microblaze_0' is selected.
+17:41:53 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+17:41:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+17:41:53 INFO  : Memory regions updated for context MicroBlaze #0
+17:41:53 INFO  : Context for processor 'microblaze_0' is selected.
+17:41:53 INFO  : 'con' command is executed.
+17:41:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+17:41:53 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+17:44:06 INFO  : Disconnected from the channel tcfchan#15.
+17:44:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:44:06 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+17:44:06 INFO  : 'jtag frequency' command is executed.
+17:44:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+17:44:12 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+17:44:12 INFO  : Context for processor 'microblaze_0' is selected.
+17:44:12 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+17:44:12 INFO  : Context for processor 'microblaze_0' is selected.
+17:44:12 INFO  : System reset is completed.
+17:44:15 INFO  : 'after 3000' command is executed.
+17:44:15 INFO  : Context for processor 'microblaze_0' is selected.
+17:44:17 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+17:44:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+17:44:17 INFO  : Memory regions updated for context MicroBlaze #0
+17:44:17 INFO  : Context for processor 'microblaze_0' is selected.
+17:44:17 INFO  : 'con' command is executed.
+17:44:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+17:44:17 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+17:48:23 INFO  : Disconnected from the channel tcfchan#16.
+17:48:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:48:23 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+17:48:23 INFO  : 'jtag frequency' command is executed.
+17:48:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+17:48:28 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+17:48:28 INFO  : Context for processor 'microblaze_0' is selected.
+17:48:28 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+17:48:28 INFO  : Context for processor 'microblaze_0' is selected.
+17:48:28 INFO  : System reset is completed.
+17:48:31 INFO  : 'after 3000' command is executed.
+17:48:31 INFO  : Context for processor 'microblaze_0' is selected.
+17:48:33 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+17:48:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+17:48:33 INFO  : Memory regions updated for context MicroBlaze #0
+17:48:33 INFO  : Context for processor 'microblaze_0' is selected.
+17:48:33 INFO  : 'con' command is executed.
+17:48:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+17:48:33 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+17:55:33 INFO  : Disconnected from the channel tcfchan#17.
+17:55:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:55:33 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+17:55:33 INFO  : 'jtag frequency' command is executed.
+17:55:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+17:55:38 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+17:55:38 INFO  : Context for processor 'microblaze_0' is selected.
+17:55:38 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+17:55:38 INFO  : Context for processor 'microblaze_0' is selected.
+17:55:38 INFO  : System reset is completed.
+17:55:41 INFO  : 'after 3000' command is executed.
+17:55:41 INFO  : Context for processor 'microblaze_0' is selected.
+17:55:43 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+17:55:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+17:55:43 INFO  : Memory regions updated for context MicroBlaze #0
+17:55:43 INFO  : Context for processor 'microblaze_0' is selected.
+17:55:43 INFO  : 'con' command is executed.
+17:55:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+17:55:43 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+18:14:01 INFO  : Disconnected from the channel tcfchan#18.
+18:14:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:14:01 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+18:14:01 INFO  : 'jtag frequency' command is executed.
+18:14:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+18:14:07 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+18:14:07 INFO  : Context for processor 'microblaze_0' is selected.
+18:14:07 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+18:14:07 INFO  : Context for processor 'microblaze_0' is selected.
+18:14:07 INFO  : System reset is completed.
+18:14:10 INFO  : 'after 3000' command is executed.
+18:14:10 INFO  : Context for processor 'microblaze_0' is selected.
+18:14:12 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+18:14:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+18:14:12 INFO  : Memory regions updated for context MicroBlaze #0
+18:14:12 INFO  : Context for processor 'microblaze_0' is selected.
+18:14:12 INFO  : 'con' command is executed.
+18:14:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+18:14:12 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+18:20:17 INFO  : Disconnected from the channel tcfchan#19.
+18:20:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:20:17 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+18:20:17 INFO  : 'jtag frequency' command is executed.
+18:20:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+18:20:22 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+18:20:22 INFO  : Context for processor 'microblaze_0' is selected.
+18:20:22 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+18:20:22 INFO  : Context for processor 'microblaze_0' is selected.
+18:20:22 INFO  : System reset is completed.
+18:20:25 INFO  : 'after 3000' command is executed.
+18:20:25 INFO  : Context for processor 'microblaze_0' is selected.
+18:20:27 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' is downloaded to processor 'microblaze_0'.
+18:20:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf
+----------------End of Script----------------
+
+18:20:27 INFO  : Memory regions updated for context MicroBlaze #0
+18:20:27 INFO  : Context for processor 'microblaze_0' is selected.
+18:20:27 INFO  : 'con' command is executed.
+18:20:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+18:20:27 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+20:33:34 INFO  : Refreshed build settings on project fsbl
+20:36:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:36:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+20:36:39 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/download.bit"
+20:37:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:41:38 INFO  : Converting 'microblaze' ELF file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' into bootable SREC format.
+20:41:38 INFO  : Caching converted image as '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/cache/data_server_0.elf.srec'.
+20:43:53 INFO  : Invoking Bootgen: bootgen -arch fpga -image /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/cache/bootimage.bif -w -o /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+20:43:53 INFO  : Bootgen command execution is done.
+20:44:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:44:34 INFO  : Converting 'microblaze' ELF file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' into bootable SREC format.
+20:44:34 INFO  : Caching converted image as '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/cache/data_server_0.elf.srec'.
+20:44:37 INFO  : Invoking Bootgen: bootgen -arch fpga -image /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/cache/bootimage.bif -w -o /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+20:44:38 INFO  : Bootgen command execution is done.
+20:48:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:49:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:49:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+20:49:30 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/download.bit"
+20:49:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:49:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:50:03 INFO  : Converting 'microblaze' ELF file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' into bootable SREC format.
+20:50:03 INFO  : Caching converted image as '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/cache/data_server_0.elf.srec'.
+20:50:04 INFO  : Invoking Bootgen: bootgen -arch fpga -image /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/cache/bootimage.bif -w -o /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+20:50:05 INFO  : Bootgen command execution is done.
+20:50:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:51:09 INFO  : Invoking Bootgen: bootgen -arch fpga -image /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/cache/bootimage.bif -w -o /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+20:51:10 INFO  : Bootgen command execution is done.
+20:54:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:54:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:55:16 INFO  : Converting 'microblaze' ELF file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/data_server_0/Debug/data_server_0.elf' into bootable SREC format.
+20:55:16 INFO  : Caching converted image as '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/cache/data_server_0.elf.srec'.
+20:55:30 INFO  : Invoking Bootgen: bootgen -arch fpga -image /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/cache/bootimage.bif -w -o /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+20:55:31 INFO  : Bootgen command execution is done.
+20:56:18 INFO  : Disconnected from the channel tcfchan#20.
+20:56:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:56:18 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+20:56:18 INFO  : 'jtag frequency' command is executed.
+20:56:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+20:56:24 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+20:56:24 INFO  : Context for processor 'microblaze_0' is selected.
+20:56:24 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+20:56:24 INFO  : Context for processor 'microblaze_0' is selected.
+20:56:24 INFO  : System reset is completed.
+20:56:28 INFO  : 'after 3000' command is executed.
+20:56:28 INFO  : Context for processor 'microblaze_0' is selected.
+20:56:28 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/fsbl/Debug/fsbl.elf' is downloaded to processor 'microblaze_0'.
+20:56:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/fsbl/Debug/fsbl.elf
+----------------End of Script----------------
+
+20:56:28 INFO  : Memory regions updated for context MicroBlaze #0
+20:56:28 INFO  : Context for processor 'microblaze_0' is selected.
+20:56:28 INFO  : 'con' command is executed.
+20:56:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+20:56:28 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+20:59:10 INFO  : Disconnected from the channel tcfchan#21.
+20:59:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:59:10 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+20:59:10 INFO  : 'jtag frequency' command is executed.
+20:59:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+20:59:16 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+20:59:16 INFO  : Context for processor 'microblaze_0' is selected.
+20:59:16 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+20:59:16 INFO  : Context for processor 'microblaze_0' is selected.
+20:59:16 INFO  : System reset is completed.
+20:59:19 INFO  : 'after 3000' command is executed.
+20:59:19 INFO  : Context for processor 'microblaze_0' is selected.
+20:59:19 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/fsbl/Debug/fsbl.elf' is downloaded to processor 'microblaze_0'.
+20:59:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/fsbl/Debug/fsbl.elf
+----------------End of Script----------------
+
+20:59:19 INFO  : Memory regions updated for context MicroBlaze #0
+20:59:19 INFO  : Context for processor 'microblaze_0' is selected.
+20:59:19 INFO  : 'con' command is executed.
+20:59:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+20:59:19 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+21:41:35 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1475372471000,  Project:1475351794000
+21:41:35 INFO  : Project block_design_wrapper_hw_platform_0's source hardware specification located at /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+21:41:41 INFO  : Copied contents of /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf into /block_design_wrapper_hw_platform_0/system.hdf.
+21:41:42 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+21:41:43 INFO  : 
+21:41:44 INFO  : 
+21:41:45 INFO  : 
+21:41:46 INFO  : Updating hardware inferred compiler options for data_server_0.
+21:41:47 INFO  : Updating hardware inferred compiler options for fsbl.
+21:41:47 INFO  : Updating hardware inferred compiler options for test_ethernet_0.
+21:41:47 INFO  : Clearing existing target manager status.
+21:41:47 INFO  : Closing and re-opening the MSS file of ther project fsbl_bsp
+21:41:48 INFO  : Closing and re-opening the MSS file of ther project fsbl_bsp
+21:41:48 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+21:41:49 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+21:42:36 INFO  : Disconnected from the channel tcfchan#22.
+21:42:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:42:36 INFO  : Jtag cable 'Digilent Nexys4DDR 210292745510A' is selected.
+21:42:36 INFO  : 'jtag frequency' command is executed.
+21:42:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:42:41 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:42:41 INFO  : Context for processor 'microblaze_0' is selected.
+21:42:41 INFO  : Hardware design information is loaded from '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:42:41 INFO  : Context for processor 'microblaze_0' is selected.
+21:42:41 INFO  : System reset is completed.
+21:42:44 INFO  : 'after 3000' command is executed.
+21:42:44 INFO  : Context for processor 'microblaze_0' is selected.
+21:42:45 INFO  : The application '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/fsbl/Debug/fsbl.elf' is downloaded to processor 'microblaze_0'.
+21:42:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/fsbl/Debug/fsbl.elf
+----------------End of Script----------------
+
+21:42:45 INFO  : Memory regions updated for context MicroBlaze #0
+21:42:45 INFO  : Context for processor 'microblaze_0' is selected.
+21:42:45 INFO  : 'con' command is executed.
+21:42:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:42:45 INFO  : Launch script is exported to file '/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/new_configuration_(1).tcl'
+21:44:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:44:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:44:34 INFO  : FPGA configured successfully with bitstream "/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/download.bit"
+21:45:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:45:33 INFO  : Invoking Bootgen: bootgen -arch fpga -image /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/cache/bootimage.bif -w -o /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper_hw_platform_0/cache/BOOT.bin  -interface spi
+21:45:33 INFO  : Bootgen command execution is done.
+00:05:39 INFO  : Disconnected from the channel tcfchan#23.
+00:05:40 ERROR : Unexpected error while parsing XMD response ￿: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+05:33:35 INFO  : Launching XSDB server: xsdb -n -interactive /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/temp_xsdb_launch_script.tcl
+05:33:36 INFO  : XSDB server has started successfully.
+05:33:37 INFO  : Processing command line option -hwspec /opt/Xilinx/Projects/mic_gather_data/mic_gather_data.sdk/block_design_wrapper.hdf.
+05:33:37 INFO  : Checking for hwspec changes in the project block_design_wrapper_hw_platform_0.

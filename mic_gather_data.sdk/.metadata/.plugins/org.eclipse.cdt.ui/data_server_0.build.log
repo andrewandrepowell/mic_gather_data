@@ -1,0 +1,66 @@
+21:41:57 **** Build of configuration Debug for project data_server_0 ****
+make all 
+Building file: ../src/data_server.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O2 -g3 -c -fmessage-length=0 -MT"src/data_server.o" -I../../data_server_0_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.6 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/data_server.d" -MT"src/data_server.o" -o "src/data_server.o" "../src/data_server.c"
+Finished building: ../src/data_server.c
+ 
+Building file: ../src/i2c_access.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O2 -g3 -c -fmessage-length=0 -MT"src/i2c_access.o" -I../../data_server_0_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.6 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/i2c_access.d" -MT"src/i2c_access.o" -o "src/i2c_access.o" "../src/i2c_access.c"
+Finished building: ../src/i2c_access.c
+ 
+Building file: ../src/main.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O2 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../data_server_0_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.6 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O2 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../data_server_0_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.6 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building file: ../src/platform_mb.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O2 -g3 -c -fmessage-length=0 -MT"src/platform_mb.o" -I../../data_server_0_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.6 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/platform_mb.d" -MT"src/platform_mb.o" -o "src/platform_mb.o" "../src/platform_mb.c"
+Finished building: ../src/platform_mb.c
+ 
+Building file: ../src/platform_ppc.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O2 -g3 -c -fmessage-length=0 -MT"src/platform_ppc.o" -I../../data_server_0_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.6 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/platform_ppc.d" -MT"src/platform_ppc.o" -o "src/platform_ppc.o" "../src/platform_ppc.c"
+Finished building: ../src/platform_ppc.c
+ 
+Building file: ../src/platform_zynq.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O2 -g3 -c -fmessage-length=0 -MT"src/platform_zynq.o" -I../../data_server_0_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.6 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/platform_zynq.d" -MT"src/platform_zynq.o" -o "src/platform_zynq.o" "../src/platform_zynq.c"
+Finished building: ../src/platform_zynq.c
+ 
+Building file: ../src/platform_zynqmp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O2 -g3 -c -fmessage-length=0 -MT"src/platform_zynqmp.o" -I../../data_server_0_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.6 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/platform_zynqmp.d" -MT"src/platform_zynqmp.o" -o "src/platform_zynqmp.o" "../src/platform_zynqmp.c"
+Finished building: ../src/platform_zynqmp.c
+ 
+Building file: ../src/sfp.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O2 -g3 -c -fmessage-length=0 -MT"src/sfp.o" -I../../data_server_0_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.6 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/sfp.d" -MT"src/sfp.o" -o "src/sfp.o" "../src/sfp.c"
+Finished building: ../src/sfp.c
+ 
+Building file: ../src/si5324.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O2 -g3 -c -fmessage-length=0 -MT"src/si5324.o" -I../../data_server_0_bsp/microblaze_0/include -mlittle-endian -mcpu=v9.6 -mxl-soft-mul -Wl,--no-relax -MMD -MP -MF"src/si5324.d" -MT"src/si5324.o" -o "src/si5324.o" "../src/si5324.c"
+Finished building: ../src/si5324.c
+ 
+Building target: data_server_0.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../data_server_0_bsp/microblaze_0/lib -mlittle-endian -mcpu=v9.6 -mxl-soft-mul -Wl,--no-relax -o "data_server_0.elf"  ./src/data_server.o ./src/i2c_access.o ./src/main.o ./src/platform.o ./src/platform_mb.o ./src/platform_ppc.o ./src/platform_zynq.o ./src/platform_zynqmp.o ./src/sfp.o ./src/si5324.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: data_server_0.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size data_server_0.elf  |tee "data_server_0.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 127714	   1532	 752474	 881720	  d7438	data_server_0.elf
+Finished building: data_server_0.elf.size
+ 
+
+21:41:57 Build Finished (took 595ms)
+

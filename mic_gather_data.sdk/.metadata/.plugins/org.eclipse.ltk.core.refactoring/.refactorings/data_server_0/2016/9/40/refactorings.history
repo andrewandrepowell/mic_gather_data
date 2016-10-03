@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;data_server_0/src/echo.c&apos; to &apos;data_server.c&apos;" description="Rename resource &apos;echo.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/echo.c" name="data_server.c" stamp="1475196027649" updateReferences="true"/>
+</session>

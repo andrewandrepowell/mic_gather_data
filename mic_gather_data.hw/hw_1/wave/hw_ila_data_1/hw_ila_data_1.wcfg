@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/opt/Xilinx/Projects/mic_gather_data/mic_gather_data.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="6451fs"></ZoomEndTime>
+      <Cursor1Time time="13000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="4" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject type="array" fp_name="block_design_i/axis_dwidth_converter_0_M_AXIS_TDATA">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">block_design_i/axis_dwidth_converter_0_M_AXIS_TDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">axis_dwidth_converter_0_M_AXIS_TDATA[31:0]</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="block_design_i/axi_dma_0_s2mm_introut">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">block_design_i/axi_dma_0_s2mm_introut</obj_property>
+      <obj_property name="ObjectShortName">axi_dma_0_s2mm_introut</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_0_axis_dwidth_converter_0_M_AXIS_TREADY">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_axis_dwidth_converter_0_M_AXIS_TREADY</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_axis_dwidth_converter_0_M_AXIS_TREADY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="u_ila_0_axis_dwidth_converter_0_M_AXIS_TVALID">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_axis_dwidth_converter_0_M_AXIS_TVALID</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_axis_dwidth_converter_0_M_AXIS_TVALID</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+   </wvobject>
+</wave_config>
